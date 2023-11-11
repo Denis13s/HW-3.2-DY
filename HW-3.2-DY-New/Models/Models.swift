@@ -7,35 +7,27 @@
 
 import Foundation
 
-struct Fruit: Decodable, CustomStringConvertible {
+struct Fruit: Decodable {
     let name: String
     let id: Int
     let family: String
+    let order: String
+    let genus: String
     let nutritions: Nutrition
     
     var description: String {
-        """
-        \(name) is a fruit of \(family) family
-        \(nutritions)
-        """
+        "\(name) is a fruit of \(family) family\n\(nutritions.description)"
     }
 }
 
-struct Nutrition: Decodable, CustomStringConvertible {
-    let calories: Int
-    let fat: Int
-    let sugar: Int
-    let carbohydrates: Int
-    let protein: Int
+struct Nutrition: Decodable {
+    let calories: Double
+    let fat: Double
+    let sugar: Double
+    let carbohydrates: Double
+    let protein: Double
     
     var description: String {
-        """
-        Nutrition facts:
-        Calories: \(calories) kKal
-        Fat: \(fat) g
-        Sugar: \(sugar) g
-        Carbohydrated: \(carbohydrates) g
-        Protein: \(protein) g
-        """
+        "Nutrition facts:\nCalories: \(calories) kKal\nFat: \(fat) g\nSugar: \(sugar) g\nCarbohydrated: \(carbohydrates) g\nProtein: \(protein) g"
     }
 }

@@ -7,11 +7,17 @@
 
 import Foundation
 
+protocol DataServiceDelegate {
+    func didGetData()
+}
+
 final class DataService {
     
     static let shared = DataService()
     
-    var fruits = [Fruit]()
+    private (set) var fruits = [Fruit]()
+    
+    var delegate: DataServiceDelegate?
     
     private init() {
         getJSONData()
@@ -22,13 +28,13 @@ extension DataService {
     
     func getJSONData() {
         guard let url = URL(string: "https://www.fruityvice.com/api/fruit/all") else {
-            print("Unable to create url")
+            print("1 - Unable to create url")
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "Unable to create data")
+            guard let data = data else {
+                print("2 - " + (error?.localizedDescription ?? "Unable to create data"))
                 return
             }
             
@@ -36,8 +42,9 @@ extension DataService {
             do {
                 let fruits = try JSONDecoder().decode([Fruit].self, from: data)
                 self.fruits = fruits
+                self.delegate?.didGetData()
             } catch {
-                print(error.localizedDescription)
+                print("3 - " + error.localizedDescription)
             }
         }.resume()
     }

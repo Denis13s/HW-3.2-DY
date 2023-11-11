@@ -9,14 +9,11 @@ import UIKit
 
 final class MainViewController: UICollectionViewController {
     
-    var fruits = [Fruit]()
+    let dataService = DataService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Register cell classes
-        //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        let dataService = DataService.shared
-        fruits = dataService.fruits
+        dataService.delegate = self
     }
 }
 
@@ -24,13 +21,13 @@ final class MainViewController: UICollectionViewController {
 extension MainViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        fruits.count
+        return dataService.fruits.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFruit", for: indexPath) as? MainItemViewCell else { return UICollectionViewCell() }
         cell.layer.cornerRadius = 15
-        cell.label.text = fruits[indexPath.item].description
+        cell.label.text = dataService.fruits[indexPath.item].description
         
         return cell
     }
@@ -45,4 +42,13 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
         CGSize(width: (UIScreen.main.bounds.width - 50) / 2, height: 100)
     }
     
+}
+
+// MARK: DataServiceDelegate
+extension MainViewController: DataServiceDelegate {
+    func didGetData() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
