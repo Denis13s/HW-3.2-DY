@@ -32,17 +32,17 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-wD-dOa">
                                             <rect key="frame" x="10" y="10" width="159" height="174"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="P7x-wD-dOa" secondAttribute="bottom" constant="10" id="Czl-Tl-7El"/>
-                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="top" secondItem="ggi-wh-pSd" secondAttribute="top" constant="10" id="Eiq-tD-47O"/>
-                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="leading" secondItem="ggi-wh-pSd" secondAttribute="leading" constant="10" id="I59-aP-46R"/>
-                                        <constraint firstAttribute="trailing" secondItem="P7x-wD-dOa" secondAttribute="trailing" constant="10" id="c5J-1Z-Xvx"/>
+                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="height" secondItem="ggi-wh-pSd" secondAttribute="height" multiplier="0.896907" id="SiV-6c-WkF"/>
+                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="width" secondItem="ggi-wh-pSd" secondAttribute="width" multiplier="0.888268" id="YXC-q3-r9R"/>
+                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="centerX" secondItem="ggi-wh-pSd" secondAttribute="centerX" id="qsf-6l-rqi"/>
+                                        <constraint firstItem="P7x-wD-dOa" firstAttribute="centerY" secondItem="ggi-wh-pSd" secondAttribute="centerY" id="ssS-GN-J69"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="179" height="194"/>

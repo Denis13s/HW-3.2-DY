@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04317D052B051BAA0034DABA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04317D042B051BAA0034DABA /* NetworkManager.swift */; };
 		04C80C1B2AFFE2E5001B6290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C80C1A2AFFE2E5001B6290 /* Assets.xcassets */; };
 		04C80C3A2AFFE335001B6290 /* MainItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C80C262AFFE334001B6290 /* MainItemViewCell.swift */; };
 		04C80C3B2AFFE335001B6290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C80C282AFFE335001B6290 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04317D042B051BAA0034DABA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		04C80C0E2AFFE2E3001B6290 /* HW-3.2-DY-New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW-3.2-DY-New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C80C1A2AFFE2E5001B6290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C80C1F2AFFE2E5001B6290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 		04C80C102AFFE2E3001B6290 /* HW-3.2-DY-New */ = {
 			isa = PBXGroup;
 			children = (
-				04C80C1F2AFFE2E5001B6290 /* Info.plist */,
 				04C80C342AFFE335001B6290 /* App */,
 				04C80C2D2AFFE335001B6290 /* Models */,
 				04C80C372AFFE335001B6290 /* Resources */,
@@ -103,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				04C80C302AFFE335001B6290 /* DataService.swift */,
+				04317D042B051BAA0034DABA /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -110,6 +112,7 @@
 		04C80C342AFFE335001B6290 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				04C80C1F2AFFE2E5001B6290 /* Info.plist */,
 				04C80C352AFFE335001B6290 /* AppDelegate.swift */,
 				04C80C362AFFE335001B6290 /* SceneDelegate.swift */,
 			);
@@ -207,6 +210,7 @@
 				04C80C432AFFE335001B6290 /* AppDelegate.swift in Sources */,
 				04C80C3E2AFFE335001B6290 /* Models.swift in Sources */,
 				04C80C442AFFE335001B6290 /* SceneDelegate.swift in Sources */,
+				04317D052B051BAA0034DABA /* NetworkManager.swift in Sources */,
 				04C80C3A2AFFE335001B6290 /* MainItemViewCell.swift in Sources */,
 				04C80C3F2AFFE335001B6290 /* DataService.swift in Sources */,
 				04C80C452AFFE335001B6290 /* MainViewController.swift in Sources */,
@@ -364,7 +368,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VDM65QNNS4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-3.2-DY-New/Info.plist";
+				INFOPLIST_FILE = "HW-3.2-DY-New/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -394,7 +398,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VDM65QNNS4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW-3.2-DY-New/Info.plist";
+				INFOPLIST_FILE = "HW-3.2-DY-New/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

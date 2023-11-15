@@ -7,6 +7,17 @@
 
 import Foundation
 
+enum Links: String {
+    case main
+    
+    var url: String {
+        switch self {
+        case .main:
+            "https://www.fruityvice.com/api/fruit/all"
+        }
+    }
+}
+
 struct Fruit: Decodable {
     let name: String
     let id: Int
